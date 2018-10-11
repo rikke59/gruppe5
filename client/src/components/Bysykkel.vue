@@ -31,7 +31,6 @@
               v-else
               :key="item.title"
               avatar
-              @click=""
             >
               <v-list-tile-avatar color="blue darken-3">
                 <span class="white--text headline">{{item.avatar}}</span>

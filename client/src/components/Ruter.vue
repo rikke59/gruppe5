@@ -31,7 +31,6 @@
               v-else
               :key="item.title"
               avatar
-              @click=""
             >
               <v-list-tile-avatar color="red darken-3">
                 <span class="white--text headline">{{item.avatar}}</span>
@@ -52,7 +51,25 @@
 
 
 <script>
+
+  import EnturAPI from '../services/EnturAPI.js'
+
+  //import EnturService from '@entur/sdk'
+  //const service = new EnturService({ clientName: 'kristiania-tavle' })
+  // const now = new Date()
+
   export default {
+    async mounted () {
+
+
+      await EnturAPI.example().then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log("error example()", err)
+      })
+
+
+    },
     data () {
       return {
         items: [
