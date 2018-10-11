@@ -12,7 +12,28 @@
 
         </v-toolbar>
 
+
         <v-list two-line>
+          <template v-for="(departure, index) in departures.slice(0, 5)">
+
+              <v-divider />
+
+              <v-list-tile avatar>
+
+              <v-list-tile-avatar color="red darken-3">
+                <span class="white--text headline">{{departure.publicCode}}</span>
+              </v-list-tile-avatar>
+
+              <v-list-tile-content>
+                <v-list-tile-title v-html="departure.destinationDisplay"></v-list-tile-title>
+                <v-list-tile-sub-title v-html="departure.departureLabel"></v-list-tile-sub-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </template>
+        </v-list>
+
+
+<!--         <v-list two-line>
           <template v-for="(item, index) in items">
             <v-subheader
               v-if="item.header"
@@ -34,7 +55,6 @@
             >
               <v-list-tile-avatar color="red darken-3">
                 <span class="white--text headline">{{item.avatar}}</span>
-                <!-- <v-icon color>{{item.avatar}}</v-icon> -->
               </v-list-tile-avatar>
 
               <v-list-tile-content>
@@ -43,7 +63,7 @@
               </v-list-tile-content>
             </v-list-tile>
           </template>
-        </v-list>
+        </v-list> -->
       </v-card>
     </v-flex>
   </v-layout>
@@ -63,6 +83,7 @@
 
 
       await EnturAPI.example().then(res => {
+        this.departures = res
         console.log(res)
       }).catch(err => {
         console.log("error example()", err)
@@ -72,6 +93,7 @@
     },
     data () {
       return {
+        departures: [],
         items: [
           { header: 'Plattform 1' },
           {
