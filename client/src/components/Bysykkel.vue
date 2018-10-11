@@ -3,10 +3,10 @@
  <v-layout row>
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
-        <v-toolbar color="red darken-3" dark>
+        <v-toolbar color="blue darken-3" dark>
 
-          <v-icon>directions_bus</v-icon>
-          <v-toolbar-title>Ruter #</v-toolbar-title>
+          <v-icon>directions_bike</v-icon>
+          <v-toolbar-title>Oslo Bysykkel</v-toolbar-title>
 
           <v-spacer></v-spacer>
 
@@ -33,7 +33,7 @@
               avatar
               @click=""
             >
-              <v-list-tile-avatar color="red darken-3">
+              <v-list-tile-avatar color="blue darken-3">
                 <span class="white--text headline">{{item.avatar}}</span>
                 <!-- <v-icon color>{{item.avatar}}</v-icon> -->
               </v-list-tile-avatar>
@@ -56,23 +56,17 @@
     data () {
       return {
         items: [
-          { header: 'Plattform 1' },
+          { header: 'Ledige Sykler i området' },
           {
-            avatar: '37',
-            title: 'Helsfyr',
-            subtitle: "<span class='text--primary'>nå 6min 12min</span>"
+            avatar: '12',
+            title: 'Bjølsen Studentby',
+            subtitle: "<span class='text--primary'>12 ledige sykler</span>"
           },
           { divider: true, inset: true },
           {
-            avatar: '54',
-            title: 'Tjuvholmen',
-            subtitle: "<span class='text--primary'>nå 6min 12min</span>"
-          },
-          { divider: true, inset: true },
-          {
-            avatar: '20',
-            title: 'Helvete',
-            subtitle: "<span class='text--primary'>nå 6min 12min</span>"
+            avatar: '10',
+            title: 'Badebakken',
+            subtitle: "<span class='text--primary'>10 ledige sykler</span>"
           }
         ]
       }
