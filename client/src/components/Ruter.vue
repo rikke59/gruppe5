@@ -1,9 +1,11 @@
+/* eslint-disable */
 <template>
  <v-layout row>
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
         <v-toolbar color="red darken-1" dark>
 
+          <v-icon>directions_bus</v-icon>
           <v-toolbar-title>Ruter #</v-toolbar-title>
 
           <v-spacer></v-spacer>
@@ -31,8 +33,9 @@
               avatar
               @click=""
             >
-              <v-list-tile-avatar>
-                <img :src="item.avatar">
+              <v-list-tile-avatar color="red">
+                <span class="white--text headline">{{item.avatar}}</span>
+                <!-- <v-icon color>{{item.avatar}}</v-icon> -->
               </v-list-tile-avatar>
 
               <v-list-tile-content>
@@ -53,23 +56,23 @@
     data () {
       return {
         items: [
-          { header: 'Today' },
+          { header: 'Plattform 1' },
           {
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-            title: 'Brunch this weekend?',
-            subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+            avatar: '37',
+            title: 'Helsfyr',
+            subtitle: "<span class='text--primary'>nå 6min 12min</span>"
           },
           { divider: true, inset: true },
           {
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-            title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-            subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
+            avatar: '54',
+            title: 'Tjuvholmen',
+            subtitle: "<span class='text--primary'>nå 6min 12min</span>"
           },
           { divider: true, inset: true },
           {
-            avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-            title: 'Oui oui',
-            subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
+            avatar: '20',
+            title: 'Helvete',
+            subtitle: "<span class='text--primary'>nå 6min 12min</span>"
           }
         ]
       }
